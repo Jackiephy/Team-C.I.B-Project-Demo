@@ -1,2 +1,2 @@
 # Team-C.I.B-Project-Demo
-GW_Hackathon_Demo
+This is a project demo for GW Hackathon on Feb.16, 2019.
