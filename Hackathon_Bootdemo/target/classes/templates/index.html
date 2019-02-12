@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<!-- Head part of Homepage -->
+<head>
+
+	<title>Welcome to Hackathon</title>
+	
+	<meta charset="utf-8">
+	<meta name="Crazy Intelligent Brains(CIB)" content="Hackathon Project">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	
+	<!-- Fonts-->
+	<link rel="stylesheet" type="text/css" th:href="@{assets/fonts/fontawesome/font-awesome.min.css}">
+	<link rel="stylesheet" type="text/css" th:href="@{assets/fonts/themify-icons/themify-icons.css}">
+	
+	<!-- Vendors-->
+	<link rel="stylesheet" type="text/css" th:href="@{assets/vendors/bootstrap4/bootstrap-grid.min.css}">
+	<link rel="stylesheet" type="text/css" th:href="@{assets/vendors/magnific-popup/magnific-popup.min.css}">
+	<link rel="stylesheet" type="text/css" th:href="@{assets/vendors/owl.carousel/owl.carousel.css}">
+	
+	<!-- App & fonts-->
+	<link rel="stylesheet" type="text/css" th:href="@{https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i&amp;amp;subset=latin-ext}">
+	<link rel="stylesheet" type="text/css" th:href="@{assets/css/main.css}">
+	
+</head>
+
+<!-- Body part of Homepage -->
+<body>
+	<div class="page-wrap">
+		<!-- header -->
+		<header class="header header__style-02">
+			<div class="container">
+			
+				<!-- Logo -->
+				<div class="header__logo">
+					<a th:href="@{'/index'}">
+						<img th:src="@{assets/img/logo.png}" alt=""/>
+					</a>
+				</div>
+				<!-- End Logo -->
+				
+				<!-- login and search -->
+				<div class="header__toogleGroup">
+					<div class="header__chooseLanguage">
+						<!-- login -->
+						<div class="dropdown">
+							<a class="dropdown__toggle" th:href="@{'/login'}">login</a>
+						</div>
+						<!-- End login -->
+					</div>
+					<div class="search-form">
+						<!-- search -->
+						<div class="search-form__toggle">
+							<i class="ti-search"></i>
+						</div>
+						<div class="search-form__form">
+							<div class="form-search">
+								<form action="#" method="post">
+									<input class="form-control" type="text" placeholder="Hit enter to search or ESC to close"/>
+								</form>
+							</div>
+						</div>
+						<!-- End search -->
+					</div>
+				</div>
+				<!-- End login and search -->
+				
+				<!-- Navigation Bar -->
+				<nav class="consult-nav">
+					<!-- menu -->
+					<ul class="consult-menu">
+						<li class="current-menu-item">
+							<a th:href="@{'/index'}">Home</a>
+						</li>
+						<li>
+							<a href="#">about</a>
+						</li>
+						<li class="menu-item-has-children">
+							<a href="#">page</a>
+							<ul class="sub-menu">
+								<li><a href="#">Counting</a></li>
+								<li><a href="#">Error404</a></li>
+								<li><a href="#">Blankpage</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">services</a>
+						</li>
+						<li class="menu-item-has-children"><a href="#">project</a>
+							<ul class="sub-menu">
+								<li>
+									<a href="#">Project detail</a>
+								</li>
+							</ul>
+						</li>
+						<li class="menu-item-has-children">
+							<a href="#">blog</a>
+							<ul class="sub-menu">
+								<li>
+									<a href="#">Blog detail</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">contact</a>
+						</li>
+					</ul>
+					<!-- End menu -->
+					<div class="navbar-toggle"><span></span><span></span><span></span></div>
+				</nav>
+				<!-- End Navigation Bar -->
+			</div>
+		</header>
+		<!-- End / header -->
+			
+		<!-- Content-->
+		<div class="md-content">
+			<!-- slider -->
+			<div class="slider">
+				<div class="carousel__element owl-carousel" 
+					 data-options='{
+					 				"items":1,
+					 				"loop":true,
+					 				"dots":false,
+					 				"nav":false,
+					 				"margin":0, 
+					 				"autoplay": true, 
+					 				"autoplayTimeout": 6000
+					 			   }'>
+					<div class="slider__item" style="background-image: url('assets/img/slider1.jpg');">
+						<div class="md-tb">
+							<div class="md-tb__cell">
+								<div class="slider__content">
+									<div class="container">
+										<h2>This is our homepage</h2>
+										<p>It is just a demo but you can learn a lot from it!</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="slider__item" style="background-image: url('assets/img/slider2.jpg');">
+						<div class="md-tb">
+							<div class="md-tb__cell">
+								<div class="slider__content">
+									<div class="container">
+										<h2>Our team name is C.I.B</h2>
+										<p>C.I.B is the abbreviation of Crazy Intelligent Brains! So let's have fun!</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- End slider -->
+
+			<!-- Demo Section 1 -->
+			<section class="md-section" style="background-color:#f7f7f7;padding-top:0;">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-10 col-lg-8 offset-0 offset-sm-0 offset-md-1 offset-lg-2 ">
+							<!-- iconbox -->
+							<div class="iconbox">
+								<div class="iconbox__icon">
+									<i class="ti-headphone-alt"></i>
+								</div>
+								<div>
+									<h2 class="iconbox__title"><a href="#">Demo Section 1</a></h2>
+									<div class="iconbox__description">Section 1 shows one of the style of our demo.</div>
+								</div>
+							</div>
+							<!-- End iconbox -->
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-6 col-md-6 col-lg-3 ">
+							<!-- iconbox -->
+							<div class="iconbox iconbox__style-02">
+								<div class="iconbox__icon"><i class="ti-announcement"></i></div>
+								<div>
+									<h2 class="iconbox__title">
+										<a href="#">Part 1</a>
+									</h2>
+									<div class="iconbox__description">
+										Section 1 Style 1 Part 1
+									</div>
+								</div>
+							</div>
+							<!-- End iconbox -->
+						</div>
+						<div class="col-sm-6 col-md-6 col-lg-3 ">
+							<!-- iconbox -->
+							<div class="iconbox iconbox__style-02">
+								<div class="iconbox__icon"><i class="ti-headphone"></i></div>
+								<div>
+									<h2 class="iconbox__title">
+										<a href="#">Part 2</a>
+									</h2>
+									<div class="iconbox__description">
+										Section 1 Style 1 Part 2
+									</div>
+								</div>
+							</div>
+							<!-- End iconbox -->
+						</div>
+						<div class="col-sm-6 col-md-6 col-lg-3 ">
+							<!-- iconbox -->
+							<div class="iconbox iconbox__style-02">
+								<div class="iconbox__icon"><i class="ti-timer"></i></div>
+								<div>
+									<h2 class="iconbox__title">
+										<a href="#">Part 3</a>
+									</h2>
+									<div class="iconbox__description">
+										Section 1 Style 1 Part 3
+									</div>
+								</div>
+							</div>
+							<!-- End iconbox -->
+						</div>
+						<div class="col-sm-6 col-md-6 col-lg-3 ">
+							<!-- iconbox -->
+							<div class="iconbox iconbox__style-02">
+								<div class="iconbox__icon"><i class="ti-briefcase"></i></div>
+								<div>
+									<h2 class="iconbox__title">
+										<a href="#">Part 4</a>
+									</h2>
+									<div class="iconbox__description">
+										Section 1 Style 1 Part 4
+									</div>
+								</div>
+							</div>
+							<!-- End iconbox -->
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- End Demo Section 1 -->
+				
+			<!-- Demo Section 2 -->
+			<section class="md-section">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-6 ">
+							<div class="title-01 title-01__style-03 md-text-left">
+								<h6 class="title-01__subTitle">Demo</h6>
+								<h2 class="title-01__title">Section 2</h2>
+							<div>
+								Section 2 shows one of the style of our demo.
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-4 ">
+								<div class="box-number">
+									<div class="box-number__number">
+										<h2 class="js-counter" data-counter-time="2000" data-counter-delay="10">9999</h2>
+									</div>
+									<div class="box-number__description">Demo</div>
+								</div>
+							</div>
+							<div class="col-sm-4 ">
+								<div class="box-number">
+									<div class="box-number__number">
+										<h2 class="js-counter" data-counter-time="2000" data-counter-delay="10">8888</h2>
+									</div>
+									<div class="box-number__description">Demo</div>
+								</div>
+							</div>
+							<div class="col-sm-4 ">
+								<div class="box-number">
+									<div class="box-number__number">
+										<h2 class="js-counter" data-counter-time="2000" data-counter-delay="10">7777</h2>
+									</div>
+									<div class="box-number__description">Demo</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6 ">
+						<div class="js-consult-slider">
+							<div class="carousel__element owl-carousel" data-options='{"items":1,"loop":true,"dots":false,"nav":false,"margin":30,"responsive":{"0":{"items":2},"576":{"items":3},"992":{"items":1}}}'>
+								<div class="image-full"><img th:src="@{assets/img/image-01.jpg}" alt=""></div>
+								<div class="image-full"><img th:src="@{assets/img/image-02.jpg}" alt=""></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End Demo Section 2 -->
+		
+		<!-- Demo Section 3 -->
+		<section class="md-section md-skin-dark js-consult-form" style="background-image:url(&quot;assets/img/backgrounds/1.jpg&quot;);">
+			<div class="md-overlay"></div>
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-8 offset-0 offset-sm-0 offset-md-0 offset-lg-2 ">
+						<!-- title -->
+						<div class="title-01 title-01__style-02">
+							<h2 class="title-01__title">Demo Section 3</h2>
+							<div>Section 3 shows one of the style of our demo.</div>
+						</div>
+						<!-- End title -->
+						<div class="consult-phone">333 333 333 333</div>
+					</div>
+				</div>
+				<!-- form -->
+				<div class="form-01 consult-form js-consult-form__content">
+					<h2 class="form-01__title">Give Us Your Feedback</h2>
+					<form class="form-01__form">
+						<div class="form__item form__item--03">
+							<input type="text" name="name" placeholder="Your name"/>
+						</div>
+						<div class="form__item form__item--03">
+							<input type="text" name="phone" placeholder="Your Email"/>
+						</div>
+						<div class="form__item form__item--03">
+							<input type="email" name="email" placeholder="Your Email"/>
+						</div>
+						<div class="form__item">
+							<textarea rows="3" name="Your message" placeholder="Your message"></textarea>
+						</div>
+						<div class="form__button">
+							<a class="btn btn-primary btn-w180" href="#">send message</a>
+						</div>
+					</form>
+				</div>
+				<!-- End form -->		
+			</div>
+		</section>
+		<!-- End Demo Section 3 -->
+		
+		<!-- Demo Section 4 -->
+		<section class="md-section consult-background">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-lg-8 offset-0 offset-sm-0 offset-md-2 offset-lg-2 ">
+						<!-- title -->
+						<div class="title-01">
+							<h2 class="title-01__title">Demo Section 4</h2>
+						</div>
+						<!-- End title -->
+					</div>
+				</div>
+				<div class="carousel__element owl-carousel" 
+					 data-options='{
+					 				"loop":false,
+					 				"dots":false,
+					 				"nav":true,
+					 				"margin":30,
+					 				"responsive":{"0":{"items":1},
+					 				"768":{"items":2},
+					 				"992":{"items":3}}}
+					 				'>
+					<div>
+						<div class="post-01__media">
+							<a href="#"><img th:src="@{assets/img/blogs/related-1.jpg}" alt=""/></a>
+						</div>
+						<div>
+							<ul class="post-01__categories">
+								<li><a href="#">C.I.B Demo</a></li>
+							</ul>
+							<h2 class="post-01__title"><a href="#">Section 4 shows one of the style of our demo.</a></h2>
+							<div class="post-01__time">Feb 11, 2019</div>
+							<div class="post-01__note">by Jackie</div>
+						</div>
+					</div>
+					<div>
+						<div class="post-01__media">
+							<a href="#"><img th:src="@{assets/img/blogs/related-2.jpeg}" alt=""/></a>
+						</div>
+						<div>
+							<ul class="post-01__categories">
+								<li><a href="#">C.I.B Demo</a></li>
+							</ul>
+							<h2 class="post-01__title"><a href="#">Section 4 shows one of the style of our demo.</a></h2>
+							<div class="post-01__time">Feb 11, 2019</div>
+							<div class="post-01__note">by Jackie</div>
+						</div>
+					</div>
+					<div>
+						<div class="post-01__media">
+							<a href="#"><img th:src="@{assets/img/blogs/related-3.jpg}" alt=""/></a>
+						</div>
+						<div>
+							<ul class="post-01__categories">
+								<li><a href="#">C.I.B Demo</a></li>
+							</ul>
+							<h2 class="post-01__title"><a href="#">Section 4 shows one of the style of our demo.</a></h2>
+							<div class="post-01__time">Feb 11, 2019</div>
+							<div class="post-01__note">by Jackie</div>
+						</div>
+					</div>
+					<div>
+						<div class="post-01__media">
+							<a href="#"><img th:src="@{assets/img/blogs/related-4.jpg}" alt=""/></a>
+						</div>
+						<div>
+							<ul class="post-01__categories">
+								<li><a href="#">C.I.B Demo</a></li>
+							</ul>
+							<h2 class="post-01__title"><a href="#">Section 4 shows one of the style of our demo.</a></h2>
+							<div class="post-01__time">Feb 11, 2019</div>
+							<div class="post-01__note">by Jackie</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End Demo Section 4 -->
+	</div>
+	<!-- End Content-->
+			
+	<!-- footer -->
+	<footer class="footer">
+		<div class="footer__main">
+			<div class="row row-eq-height">
+				<div class="col-8 col-sm-7 col-md-9 col-lg-3 ">
+					<div class="footer__item">
+						<a class="consult_logo" href="#">
+						<img th:src="@{assets/img/logo.png}" alt=""/></a>
+						<p>This is a demo for hackathon.</p>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 offset-0 offset-sm-0 offset-md-0 offset-lg-0 offset-xl-1 ">
+					<div class="footer__item">
+						<!-- widget-text__widget -->
+						<section class="widget-text__widget widget">
+							<div class="widget-text__content">
+								<ul>
+									<li><a href="#">Term of Services </a></li>
+									<li><a href="#">Privacy Policy </a></li>
+									<li><a href="#">Sitemap </a></li>
+									<li><a href="#">Help</a></li>
+								</ul>
+							</div>
+						</section>
+						<!-- End widget-text__widget -->
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-4 col-lg-2 col-xl-2 ">
+					<div class="footer__item">
+						<!-- widget-text__widget -->
+						<section class="widget-text__widget widget">
+							<div class="widget-text__content">
+								<ul>
+									<li><a href="#">How It Work </a></li>
+									<li><a href="#">Carrier </a></li>
+									<li><a href="#">Pricing </a></li>
+									<li><a href="#">Support</a></li>
+								</ul>
+							</div>
+						</section>
+						<!-- End widget-text__widget -->
+					</div>
+				</div>
+				<div class="col-md-4 col-lg-2 col-xl-2 ">
+					<div class="footer__item">
+						<!-- form-sub -->
+						<div class="form-sub">
+							<h4 class="form-sub__title">Our Newsletter</h4>
+							<form class="form-sub__form">
+								<div class="form-item">
+									<input class="form-control" type="email" placeholder="Enter Your Email Address..."/>
+								</div>
+								<div class="form-submit">
+									<button class="form-button" type="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+								</div>
+							</form>
+						</div>
+						<!-- End form-sub -->
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-4 col-lg-2 col-xl-2  consult_backToTop">
+					<div class="footer__item">
+						<a href="#" id="back-to-top"> 
+							<i class="fa fa-angle-up" aria-hidden="true"> </i>
+							<span>Back To Top</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer__copyright">2019 &copy; Crazy Intelligent Brains(C.I.B)</div>
+	</footer>
+	<!-- End footer -->
+</div>
+
+<!-- js -->
+<script type="text/javascript" th:src="@{assets/vendors/_jquery/jquery.min.js}"></script>
+<script type="text/javascript" th:src="@{assets/vendors/imagesloaded/imagesloaded.pkgd.js}"></script>
+<script type="text/javascript" th:src="@{assets/vendors/isotope-layout/isotope.pkgd.js}"></script>
+<script type="text/javascript" th:src="@{assets/vendors/jquery.countdown/jquery.countdown.min.js}"></script>
+<script type="text/javascript" th:src="@{assets/vendors/jquery.countTo/jquery.countTo.min.js}"></script>
+<script type="text/javascript" th:src="@{assets/vendors/jquery.countUp/jquery.countup.min.js}"></script>
+<script type="text/javascript" th:src="@{assets/vendors/jquery.matchHeight/jquery.matchHeight.min.js}"></script>
+<script type="text/javascript" th:src="@{assets/vendors/jquery.mb.ytplayer/jquery.mb.YTPlayer.min.js}"></script>
+<script type="text/javascript" th:src="@{assets/vendors/magnific-popup/jquery.magnific-popup.min.js}"></script>
+<script type="text/javascript" th:src="@{assets/vendors/masonry-layout/masonry.pkgd.js}"></script>
+<script type="text/javascript" th:src="@{assets/vendors/owl.carousel/owl.carousel.js}"></script>
+<script type="text/javascript" th:src="@{assets/vendors/jquery.waypoints/jquery.waypoints.min.js}"></script>
+<script type="text/javascript" th:src="@{assets/vendors/menu/menu.min.js}"></script>
+<script type="text/javascript" th:src="@{assets/vendors/smoothscroll/SmoothScroll.min.js}"></script>
+<!-- App-->
+<script type="text/javascript" th:src="@{assets/js/main.js}"></script>
+
+</body>
+</html>

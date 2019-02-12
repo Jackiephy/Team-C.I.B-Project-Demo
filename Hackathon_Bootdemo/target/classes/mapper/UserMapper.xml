@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.demo.mapper.UserMapper">
+
+<sql id="userColumn">
+	id,
+	username,
+	password
+</sql>
+
+<select id="selectAll" resultType="User">	
+	select <include refid="userColumn"/>
+	from user
+</select>
+
+<select id="selectById" resultType="User">	
+	select <include refid="userColumn"/>
+	from user
+	where id=#{id}
+</select>
+
+<select id="selectByUsername" resultType="User">	
+	select <include refid="userColumn"/>
+	from user
+	where username=#{username}
+</select>
+
+<insert id="insert" parameterType="User" useGeneratedKeys="true" keyProperty="id">
+	insert into user
+		(username,password)
+	values
+		(#{username},#{password})
+</insert>
+
+<delete id="delete">
+	delete from user 
+	where id = #{id}	
+</delete>
+
+<update id="update" parameterType="User">
+    update user
+    set
+    username = #{username}
+    password = #{password}
+  where id = #{id}
+</update>
+</mapper>
