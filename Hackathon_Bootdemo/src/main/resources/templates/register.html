@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<!-- Head part of Login Page -->
+<head>
+
+	<title>Login|C.I.B</title>
+	
+	<meta charset="utf-8">
+	<meta name="Crazy Intelligent Brains(CIB)" content="Hackathon Project">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	
+	<link rel="stylesheet" type="text/css" th:href="@{login/css/style.css}" />
+	<link rel="stylesheet" type="text/css" th:href="@{login/css/body.css}"/> 
+</head>
+
+<!-- Body part of Login Page -->
+<body>
+<div class="container">
+	<section id="content">
+		<!-- form -->
+		<form role="form" action="/checkregister" method="post">
+			<h1>Sign up</h1>
+			<div>
+				<input type="text" placeholder="Username" id="username" name="username" />
+			</div>
+			<div>
+				<input type="password" placeholder="Password" id="password" name="password"/>
+			</div>
+			<div th:if="${error}">
+				<span class="help-block u-errormessage" id="js-server-helpinfo" th:text="${error}" style="color:#F00">
+					&nbsp;
+				</span>			
+			</div> 
+			<div>
+				<input type="submit" value="sign up" class="btn btn-primary" id="js-btn-login"/>
+				<a th:href="@{'/login'}">Already have an account? Login here!</a>
+			</div>
+		</form>
+		<!-- End form -->
+	</section><!-- content -->
+</div>
+<!-- container -->
+
+
+<br><br><br><br>
+<div style="text-align:center;">
+<p>2019 &copy; Crazy Intelligent Brains(C.I.B)</p>
+</div>
+</body>
+</html>
